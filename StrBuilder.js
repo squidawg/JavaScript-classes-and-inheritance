@@ -2,6 +2,7 @@ import {Builder} from "./Builder.js";
 
 function StringBuilder(element){
     Builder.call(this, element);
+    this.element = this.isString(element) ? element: '';
 
 }
 
@@ -17,4 +18,3 @@ StringBuilder.prototype.sub = function (from, to){
     this.element = this.element.substring(from, to + 1);
     return this
 }
-

@@ -4,6 +4,7 @@ import {Builder} from "./Builder.js";
 class IntBuilder extends Builder {
     constructor(element) {
         super(element);
+        this.element = this.isNum(element) ? element: 0;
     }
 
     static random(from, to){
